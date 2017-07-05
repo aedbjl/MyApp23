@@ -15,7 +15,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        //以整個螢幕填滿window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        window!.backgroundColor = UIColor.white
+        
+        //設定啟動的 viewcontroller
+        window!.rootViewController = ViewController()
+        
+        //建構一個 UINavigationC
+        let nav = UINavigationController(rootViewController: ViewController())
+        
+        
+        //設定啟動的 VC => nav
+        window!.rootViewController = nav
+        
+        //
+        window!.makeKeyAndVisible()
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         return true
     }
 
